@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    parallaxCSS -->
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/AdhWorld-img.png" />
+    <title>AdhWorld</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-lg" style="background: transparent;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/AdhWorld-img.png" alt="AdhWorld Logo" width="40" height="40" class="d-inline-block align-text-top">
+                <img src="img/AdhWorld-text.png" alt="AdhWorld Text" width="100" height="40" class="d-inline-block align-text-top">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="login.php">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="karya.php">Karya</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#sec">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+              </form>
+          </div>
+        </div>
+      </nav>
+      
+    <!-- Akhir Navbar -->
+    <section>
+        <img src="img/stars.png" id="stars" alt="">
+        <img src="img/moon.png" id="moon" alt="">
+        <img src="img/mountains_behind.png" id="mountains_behind" alt="">
+        <h1 id="text">AdhWorld</h1>
+        <a href="#sec" id="btn" class="btn btn-sm btn-primary">Join Skuy</a>
+        <img src="img/mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Introduction</h2>
+        <p>Selamat datang di website AdhWorld, tempat yang menyediakan jasa pembuatan website dengan fitur menarik untuk membantu Anda membangun brand yang kuat dan meningkatkan online presence bisnis Anda. AdhWorld menggabungkan keahlian teknologi dengan desain yang elegan dan modern untuk menghasilkan website yang tidak hanya menarik tetapi juga fungsional dan mudah digunakan.</p>
+        <p>Dengan pengalaman bertahun-tahun dalam industri pembuatan website, AdhWorld memahami betapa pentingnya website yang responsif dan dapat diakses dari berbagai perangkat untuk memaksimalkan potensi pelanggan Anda. Oleh karena itu, AdhWorld menawarkan layanan pembuatan website yang dioptimalkan untuk tampil sempurna di desktop, tablet, maupun smartphone.</p>
+        <p>Di sini, AdhWorld berkomitmen untuk memberikan hasil terbaik dan terpercaya dalam pembuatan website dengan memperhatikan setiap detail yang dibutuhkan. Mulai dari konsep hingga peluncuran, tim AdhWorld akan terus berkomunikasi dengan Anda untuk memastikan setiap kebutuhan Anda terpenuhi.</p>
+        <p>AhdWorld, adalah sebuah website layanan servis yang menawarkan anda berbagai macam fitur yang dapat digunakan untuk memenuhi kebutuhan anda. Berangkat dari sebuah keresahan lingkungan sekitar developer sendiri, terkadang masih sulit untuk mengkoordinir suatu forum, organisasi, ataupun sebuah komunitas. Dengan adanya AdhWorld, AdhWorld menawarkan beberapa fitur yang masih akan dikembangkan secara bertahap. Mengapa?, karena developer hanyalah fullstack developer, yang hanya merangkai serta membuat sistem di website ini secara individu :D.<br><br></p> <h2 id="tanyalayanan">Layanan apa saja yang AdhWorld berikan?</h2><br><br>
+          <h3>AdhKas</h3>
+          <p>
+          AdhKas adalah layanan yang diberikan AdhWorld kepada penggunanya untuk mengatur alur keluar masuknya pengeluaran. AdhKas dapat digunakan bagi segala forum, organisasi, dan komunitas. Fitur yang diberikan AdhKas menghitung dan mengkoordinir kas suatu forum. Contohnya di lingkup sekolah AdhKas dapat mengatur kas kelas, dan menampilkan data siswa yang sudah atau belum membayar kas. Dalam AdhKas ini hanya bendahara yang dapat menginput data. <br><br></p>
+          <h3>AdhWeb</h3>
+          *Coming Soon* Jasa pembuatan web gratis.</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountainsBehind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountainsFront = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.25 + 'px';
+            mountainsBehind.style.top = value * 0.25 + 'px';
+            mountainsFront.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
